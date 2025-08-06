@@ -11,13 +11,13 @@ app.use(express.json());
 app.use('/api/posts', postRoutes);
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Travel Blog API is working 🌍✈️' });
+  res.json({ message: 'Travel Blog API is working ' });
 });
 
 
 mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('✅ MongoDB connected'))
-  .catch((err) => console.log('❌ MongoDB connection error:', err));
+  .then(() => console.log(' MongoDB connected'))
+  .catch((err) => console.log(' MongoDB connection error:', err));
 
 module.exports = app;
 
